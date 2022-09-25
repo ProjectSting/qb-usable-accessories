@@ -1,4 +1,11 @@
-	-- [[ CHAINS ]] --
+Paste the images in 
+
+qb-inventory/html/images
+-----
+
+
+
+-- [[ CHAINS ]] --
     ['diamondchainv'] 				 = {['name'] = 'diamondchainv', 			  	['label'] = 'Diamond Chain', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
     ['cubanchain'] 					 = {['name'] = 'cubanchain', 			  	 	['label'] = 'Cuban Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
     ['tmfchain'] 					 = {['name'] = 'tmfchain', 						['label'] = 'TMF Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
