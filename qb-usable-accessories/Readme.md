@@ -1,172 +1,52 @@
-
-## Dependencies :
-
-QBCore Framework - https://github.com/qbcore-framework/qb-core
-
-PolyZone - https://github.com/mkafrin/PolyZone
-
-qb-target - https://github.com/BerkieBb/qb-target
-
-qb-input - https://github.com/qbcore-framework/qb-input
-
-qb-menu - https://github.com/qbcore-framework/qb-menu
-
-
-## Add to qb-smallresources/server/consumeables.lua. 
-```
---drinks
-QBCore.Functions.CreateUseableItem("skullmask", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCocktail", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("applecocktail", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCocktail", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("bananacocktail", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCocktail", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("cherrydrink", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCupBeer", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("kiwicocktail", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCocktail", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("lemondrink", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCupBeer", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("limedrink", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCupBeer", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("orangedrink", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCupBeer", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("paradisecocktail", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCocktail", src, item.name)
-    end
-end)
-QBCore.Functions.CreateUseableItem("watermelondrink", function(source, item)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:DrinkCupBeer", src, item.name)
-    end
-end)
-
-```
-
-
-
-## Add to qb-smallresources/config.lua
-```
-Consumeables = {
-
---alcohol
-    ["paradisecocktail"] = math.random(75, 100),
-    ["skullmask"] = math.random(50, 75),
-    ["applecocktail"] = math.random(50, 75),
-    ["bananacocktail"] = math.random(50, 75),
-    ["kiwicocktail"] = math.random(50, 75),    
-    ["cherrydrink"] = math.random(55, 80),
-    ["lemondrink"] = math.random(55, 80),
-    ["limedrink"] = math.random(55, 80),
-    ["orangedrink"] = math.random(55, 80),
-    ["watermelondrink"] = math.random(55, 80),
-```
-
-## Insert into @qb-core/shared/items.lua 
-
-```
-QBShared.Items = {
+	-- [[ CHAINS ]] --
+    ['diamondchainv'] 				 = {['name'] = 'diamondchainv', 			  	['label'] = 'Diamond Chain', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['cubanchain'] 					 = {['name'] = 'cubanchain', 			  	 	['label'] = 'Cuban Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['tmfchain'] 					 = {['name'] = 'tmfchain', 						['label'] = 'TMF Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['crosschain'] 					 = {['name'] = 'crosschain', 					['label'] = 'Cross Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['woochain'] 				     = {['name'] = 'woochain', 					    ['label'] = 'Woo Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['woochaintwo'] 				 = {['name'] = 'woochaintwo', 					['label'] = 'Woo Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['spadeschain'] 				 = {['name'] = 'spadeschain', 					['label'] = 'Spade Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['cubanmafiachain'] 			 = {['name'] = 'cubanmafiachain', 				['label'] = 'Cuban Mafia Chain', 		['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['gthreechain'] 			 	 = {['name'] = 'gthreechain', 					['label'] = 'Three Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['ratchain'] 			 	 	 = {['name'] = 'ratchain', 						['label'] = 'Rat Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['otfchain'] 			 	 	 = {['name'] = 'otfchain', 						['label'] = 'OTF Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
+    ['spadeschain'] 			 	 = {['name'] = 'spadeschain', 					['label'] = 'Spade Chain', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'chainpng.png', 			['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A chain'},
 	
-	--drinks
-	['cherrydrink'] 				 	 = {['name'] = 'cherrydrink', 			  	  	['label'] = 'Cherry Drink', 				['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'cherrydrink.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Cherries!'},
-	['lemondrink'] 				 	 = {['name'] = 'lemondrink', 			  	     	['label'] = 'Lemon Drink', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'lemondrink.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Rip-off Lemonade'},
-	['limedrink'] 				 	 = {['name'] = 'limedrink', 			  	     	['label'] = 'Lime Drink', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'limedrink.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Limes...'},
-	['orangedrink'] 				 	 = {['name'] = 'orangedrink', 			     	['label'] = 'Orange Drink', 				['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'orangedrink.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A fancy orange juice...'},
-	['watermelondrink'] 				 	 = {['name'] = 'watermelondrink', 			  	    	['label'] = 'Watermelon Drink', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'watermelondrink.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Watermelon Drink.'},
-	['paradisecocktail'] 				     	 = {['name'] = 'paradisecocktail', 			    	  	['label'] = 'Paradise Cocktail', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'paradisecocktail.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Living in paradise!'},
-	['skullmask'] 				     	 = {['name'] = 'skullmask', 			    	  	['label'] = 'Cherry Cocktail', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'skullmask.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Cherries.. But with whiskey'},
-	['applecocktail'] 				     	 = {['name'] = 'applecocktail', 			    	  	['label'] = 'Apple Cocktail', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'applecocktail.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Rumor has it that Issac Newton made this.'},
-	['bananacocktail'] 				     	 = {['name'] = 'bananacocktail', 			    	  	['label'] = 'Banana Cocktail', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'bananacocktail.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Minions made this.'},
-	['kiwicocktail'] 				     	 = {['name'] = 'kiwicocktail', 			    	  	['label'] = 'Kiwi Cocktail', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'kiwicocktail.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Kiwi.'},
-	['drink-glass'] 				 = {['name'] = 'drinks-glass', 			  	  	['label'] = 'Glass', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'drinks-glass.png', 		['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Glass made for cocktails!'},
-	['cocktailglass'] 				 = {['name'] = 'cocktailglass', 			  	  	['label'] = 'Cocktail Glass', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'drinks-glass.png', 		['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Glass made for normal drinks'},
-	['apple'] 		    	 = {['name'] = 'apple', 			   	['label'] = 'Apple',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'apple.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'an item!'},
-	['banana'] 		    	 = {['name'] = 'banana', 			   	['label'] = 'Banana',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'banana.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'an item!'},
-	['cherry'] 		    	 = {['name'] = 'cherry', 			   	['label'] = 'Cherry',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'cherry.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'an item!'},
-	['kiwi'] 		    	 = {['name'] = 'kiwi', 			   	['label'] = 'Kiwi',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'kiwi.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'an item!'},
-	['lemon'] 		    	 = {['name'] = 'lemon', 			   	['label'] = 'Lemon',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'lemon.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'an item!'},
-	['lime'] 		    	 = {['name'] = 'lime', 			   	['label'] = 'Lime',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'lime.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'an item!'},
-	['orange'] 		    	 = {['name'] = 'orange', 			   	['label'] = 'Orange',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'orange.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'an item!'},
-	['watermelon'] 		    	 = {['name'] = 'watermelon', 			   	['label'] = 'Watermelon',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'watermelon.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'an item!'},
-	['whiskey'] 		    	 = {['name'] = 'whiskey', 			   	['label'] = 'Whiskey',               	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'whiskey.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'This is not a bottle of booze!'},
+    -- [[  MASKS  ]] --
+    ['monkeymask']  				 = {['name'] = 'monkeymask', 				    ['label'] = 'Monkeymask',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_3.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+    ['skullmask']  					 = {['name'] = 'skullmask', 				    ['label'] = 'Skullmask',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_2.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+    ['balaclava']  					 = {['name'] = 'balaclava', 				    ['label'] = 'Balaclava',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_57.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+    ['scarecrowmask']  				 = {['name'] = 'scarecrowmask', 				['label'] = 'Scarecrowmask',  	        ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'scarecrowmask.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+    ['terrorwit']  				     = {['name'] = 'terrorwit', 				    ['label'] = 'Pig Mask',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_1.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	['hockeymask']  				 = {['name'] = 'hockeymask', 				    ['label'] = 'Hockeymask',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_4.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	['sok']  				         = {['name'] = 'sok', 				            ['label'] = 'Red Sock Mask',  	        ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_32.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},	
+	['clown']  						 = {['name'] = 'clown', 				        ['label'] = 'Clown Mask',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_95.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	['noselong']  					 = {['name'] = 'noselong', 				        ['label'] = 'Long Nose',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_12.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	['tshirtmask']  				 = {['name'] = 'tshirtmask', 				    ['label'] = 'Tshirtmask',  		        ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_54.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	['zak']  						 = {['name'] = 'zak', 				            ['label'] = 'Bag Mask',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_49.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	['gorilla']  					 = {['name'] = 'gorilla', 				        ['label'] = 'Gorilla Mask',  	        ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_96.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	['paard']  						 = {['name'] = 'paard', 				        ['label'] = 'Horse Mask',  	            ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_97.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+    ['paardu']  					 = {['name'] = 'paardu', 				        ['label'] = 'Uinicorn Mask',  	        ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_98.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	['skullr']  					 = {['name'] = 'skullr', 				        ['label'] = 'No Skin Mask',  	        ['weight'] = 1,  		['type'] = 'item',  	['image'] = 'Clothing_1_99.png',  		['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,    ['combinable'] = nil, 	['description'] = ''},
+	
+	-- [[   SHOES   ]] --
+    ['nikefoamposites'] 		     = {['name'] = 'nikefoamposites', 				['label'] = 'Nike Foamposite', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
+    ['nikefoamposites1'] 		     = {['name'] = 'nikefoamposites1', 				['label'] = 'Nike Foamposite', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
+    ['nikefoamposites2'] 		     = {['name'] = 'nikefoamposites2', 				['label'] = 'Nike Foamposite', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
+    ['jordan6s'] 		             = {['name'] = 'jordan6s', 				        ['label'] = 'Jordan 6', 		    	['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
+    ['jordan6s1'] 		             = {['name'] = 'jordan6s1', 			    	['label'] = 'Jordan 6', 		    	['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
+    ['jordan6s2'] 		             = {['name'] = 'jordan6s2', 				    ['label'] = 'Jordan 6', 		    	['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
+    ['jordan11s'] 		             = {['name'] = 'jordan11s', 				    ['label'] = 'Jordan 11', 		    	['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
+    ['jordan11s1'] 		             = {['name'] = 'jordan11s1', 			    	['label'] = 'Jordan 11', 		    	['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
+    ['jordan11s2'] 		             = {['name'] = 'jordan11s2', 				    ['label'] = 'Jordan 11', 		    	['weight'] = 0, 		['type'] = 'item', 		['image'] = 'shoe.png', 		    	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A shoe'},
 
-}
+    -- [[ HATS ]] --
+    ['buckethat'] 		             = {['name'] = 'buckethat', 				    ['label'] = 'Bucket hat', 		        ['weight'] = 0, 		['type'] = 'item', 		['image'] = 'hat.png', 		          	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A hat'},
+    ['santahat'] 		             = {['name'] = 'santahat', 				        ['label'] = 'Santa Hat', 		        ['weight'] = 0, 		['type'] = 'item', 		['image'] = 'hat.png', 		          	['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A hat'},
 
-```
+    -- [[  GLASSES  ]] --
+    ['glasses'] 		             = {['name'] = 'glasses', 				        ['label'] = 'Glasses', 		            ['weight'] = 0, 		['type'] = 'item', 		['image'] = 'glasses.png', 		        ['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Glasses'},
+    ['glasses1'] 		             = {['name'] = 'glasses1', 				        ['label'] = 'Glasses', 		            ['weight'] = 0, 		['type'] = 'item', 		['image'] = 'glasses.png', 		        ['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Glasses'},
 
-## Insert Contents of ps-masquerade/Images into @qb-inventory/HTML/Images
-
-
-## Insert into @qb-core/shared/jobs.lua 
-```
-QBShared.Jobs = {
-    ["masquerade"] = {
-		label = "Limey\'s Juice Shop",
-		defaultDuty = true,
-		grades = {
-            ['0'] = {
-                name = "Trainee",
-                payment = 75 --edit depending on your economy
-            },
-			['1'] = {
-                name = "Worker",
-                payment = 100 --edit depending on your economy
-            },
-            ['3'] = {
-                name = "manager",
-                payment = 150 --edit depending on your economy
-            },
-			['4'] = {
-                name = "Owner",
-                isboss = true,
-                payment = 200 --edit depending on your economy
-            },
-        },
-	},
-}		
-```
+    -- [[ WATCHES ]] --
+    ['shinywatch'] 		             = {['name'] = 'shinywatch', 				    ['label'] = 'Shiny Watch', 		        ['weight'] = 0, 		['type'] = 'item', 		['image'] = 'watch.png', 		        ['unique'] = true,  	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A WATCH'},
